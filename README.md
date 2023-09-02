@@ -1,9 +1,13 @@
 wakatime Profile views
 
 About me
+
 Hello, I'm MineCNC, a student from Malaysia.
+
 My Xbox Id is MineCNC3547.
+
 Discord Server ( https://discord.gg/a6qABFSJkW )
+
 
 Tech Stack
 
