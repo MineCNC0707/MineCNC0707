@@ -1,14 +1,10 @@
-wakatime Profile views
+[![wakatime](https://wakatime.com/badge/user/56ad6549-a054-44d0-b495-36b06ce29e9f.svg)](https://wakatime.com/@56ad6549-a054-44d0-b495-36b06ce29e9f)
 
-About me
-
+## About me
 Hello, I'm MineCNC, a student from Malaysia.
-
 My Xbox Id is MineCNC3547.
 Discord Server ( https://discord.gg/a6qABFSJkW )
 
-
-Tech Stack
-
+## Tech Stack
 [![My Skills](https://skillicons.dev/icons?i=js,html,css,python,powershell,unity)](https://skillicons.dev)
 [![My Skills](https://skillicons.dev/icons?i=discord,youtube)](https://skillicons.dev)
