@@ -65,6 +65,8 @@ npx wrangler deploy
 
 配置使用 Worker 静态 Assets、D1 和 Durable Objects。`ROOMS` 每个房间一个实例，房间状态先写入 Durable Object SQLite，再广播给已认证 WebSocket 客户端；D1 保存账号、会话、成长、好友、邀请和结算收据。真实货币、经验、购买和伤害结果不会以 localStorage 为权威。
 
+本次部署已验证：GitHub 源码位于 [`horde-mayhem` 分支](https://github.com/MineCNC0707/MineCNC0707/tree/horde-mayhem)，Cloudflare Worker 地址为 <https://horde-mayhem.cncchow7777.workers.dev>，远端 D1 数据库为 `horde-mayhem`（ID `791f0141-b047-4b6a-a80b-50466720a8f7`）。
+
 生产环境建议把 Worker 绑定到 HTTPS 自定义域名。会话使用 `HttpOnly; SameSite=Strict` Cookie；密码在 Worker 端使用 PBKDF2（随机 salt）哈希，前端不会接触密码哈希或密钥。登录接口和已认证 API 都有基础频率限制及请求大小限制。
 
 ## 游戏功能说明
@@ -91,4 +93,4 @@ npx wrangler deploy
 - Phase 5：已完成 Worker、D1 schema、HttpOnly 会话、密码哈希、教学持久化、好友和邀请冷却。
 - Phase 6：已完成 Durable Object 房间、WebSocket 重连、Ping、动作序号去重、插值远端角色、敌人/波次同步和服务端结算收据。
 
-这些阶段均通过本地静态检查、服务器模拟测试和本地 Worker 集成测试；真实生产部署仍需要用户自己的 Cloudflare 账号、D1 ID 和域名配置。
+这些阶段均通过本地静态检查、服务器模拟测试、本地 Worker 集成测试和线上 Worker 静态资源检查；如果需要自定义域名，仍需在自己的 Cloudflare 控制台添加域名绑定。
