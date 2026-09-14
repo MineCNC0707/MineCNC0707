@@ -1,0 +1,23 @@
+{
+  "name": "horde-mayhem",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "check": "node --check public/js/config.js && node --check public/js/game.js && node --check public/js/home.js && node --check public/js/models.js && node --check public/js/network.js && node --check public/js/progression.js && node --check public/js/settings.js && node --check public/js/audio.js && node --check public/js/ui.js && node --check worker/worker.js && node --check worker/room.js && node --check worker/simulation.js && node --check scripts/dev.mjs && node --check scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:integration": "node tests/integration.mjs",
+    "build": "node scripts/build.mjs",
+    "dev:worker": "npm run build && wrangler dev --port 8787",
+    "db:init": "wrangler d1 execute horde-mayhem --local --file worker/schema.sql"
+  },
+  "dependencies": {
+    "three": "0.186.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260914.1",
+    "wrangler": "^4.131.2",
+    "ws": "^8.21.3"
+  }
+}

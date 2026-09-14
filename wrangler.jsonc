@@ -1,0 +1,12 @@
+{
+  "$schema":"./node_modules/wrangler/config-schema.json",
+  "name":"horde-mayhem",
+  "main":"worker/worker.js",
+  "compatibility_date":"2026-09-14",
+  "compatibility_flags":["nodejs_compat"],
+  "assets":{"directory":"./dist","binding":"ASSETS","run_worker_first":["/api/*"]},
+  "d1_databases":[{"binding":"DB","database_name":"horde-mayhem","database_id":"791f0141-b047-4b6a-a80b-50466720a8f7"}],
+  "durable_objects":{"bindings":[{"name":"ROOMS","class_name":"GameRoom"}]},
+  "migrations":[{"tag":"v1","new_sqlite_classes":["GameRoom"]}],
+  "observability":{"enabled":true}
+}
